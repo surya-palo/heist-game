@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Gilded Vault — a museum heist</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="wrap">
+  <header id="hud">
+    <div class="hud-left">
+      <span id="level-name">The Marble Hall</span>
+      <span id="loot-pill">💎 <b id="loot-count">0/1</b></span>
+    </div>
+    <div class="hud-mid">
+      <label for="alarm-bar">ALARM</label>
+      <div id="alarm-track"><div id="alarm-fill"></div></div>
+      <span id="alarm-pct">0%</span>
+    </div>
+    <div class="hud-right">
+      <span>💨 <b id="smoke-count">3</b></span>
+      <span>⏱ <b id="timer">0:00</b></span>
+      <span>★ <b id="score">0</b></span>
+    </div>
+  </header>
+
+  <div id="stage">
+    <canvas id="game" width="960" height="600"></canvas>
+    <div id="banner" class="hidden">
+      <h2 id="banner-title"></h2>
+      <p id="banner-text"></p>
+      <button id="banner-btn">Continue</button>
+    </div>
+    <div id="title-card">
+      <h1>THE GILDED VAULT</h1>
+      <p class="tagline">One diamond. Three galleries. No witnesses.</p>
+      <p class="brief">Slip past the guards, crack the display case, grab the Aurora
+      Diamond and reach the getaway door — without tripping the alarm.</p>
+      <ul class="controls">
+        <li><b>WASD / Arrows</b> — move</li>
+        <li><b>Shift</b> — sneak (slower, harder to spot)</li>
+        <li><b>E</b> (hold) — crack the case / use the exit</li>
+        <li><b>Q</b> — smoke pellet (3 per gallery)</li>
+      </ul>
+      <button id="start-btn">Begin the heist</button>
+      <p class="foot">Guards and cameras see in cones. Stay out of the light — or vanish in smoke.</p>
+    </div>
+  </div>
+
+  <footer id="hints">
+    <span><b>WASD</b> move</span>
+    <span><b>Shift</b> sneak</span>
+    <span><b>E</b> interact</span>
+    <span><b>Q</b> smoke pellet</span>
+    <span><b>R</b> restart gallery</span>
+  </footer>
+</div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
